@@ -1,0 +1,58 @@
+:root
+{
+    --clr-neonnaranja: rgb(190, 120, 14);
+}
+
+
+body
+{
+    background-color: rgb(6, 8, 46);
+}
+
+.neonnaranja
+{
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: currentColor 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    display: inline-block;
+    color: var(--clr-neonnaranja);
+    text-shadow: 
+    0 0 1.125em hsl(0, 0%, 65%),
+    0 0 1.125em currentColor;
+    box-shadow: inset 0 0 1em 0 var(--clr-neonnaranja), 0 0 1em 0 var(--clr-neonnaranja);
+}
+
+#span
+{
+    margin: left 100px;
+}
+
+#div1
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#div2
+{
+    margin-top: 20px;
+}
+
+#tp1
+{
+    color:  rgb(190, 120, 14);
+    margin-top: 40px;
+}
+
+#imagen
+{
+    margin-top: 40px;
+}
+
+#Color
+{
+    color:  rgb(190, 120, 14);
+}
