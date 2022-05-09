@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --clr-neonnaranja: #00ff0a;
+}
+
+h1
+{
+    background-image: url(tumblr_mywg5sk2pE1rlqfnro1_500.gif);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 210px 95px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: currentColor 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    display: inline-block;
+    color: var(--clr-neonnaranja);
+    text-shadow: 
+    0 0 1.125em hsl(0, 0%, 65%),
+    0 0 1.125em currentColor;
+    box-shadow: inset 0 0 1em 0 var(--clr-neonnaranja), 0 0 1em 0 var(--clr-neonnaranja);
+}
+
+
+.div1
+{   
+    
+    margin: auto;
+    text-align: center;
+    background-color: #042104;
+    animation: animateColor1 8s linear infinite;
+}
+
+@keyframes animateColor1
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+
+}
+
+section 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #042104;
+    animation: animateColor 8s linear infinite;
+}
+
+@keyframes animateColor
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+
+}
+
+section .container {
+    display: flex;
+    /*background-image: url(tumblr_mywg5sk2pE1rlqfnro1_500.gif);
+    background-repeat: repeat;
+    background-attachment: auto;
+    background-size: 330px 370px;*/
+}
+
+section .container .circle {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 -7.5px;
+}
+
+section .container .circle span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+    /* 360 / 20 = 18deg */
+}
+
+section .container .circle span::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: calc(50% - 7.5px);
+    width: 15px;
+    height: 15px;
+    background: #00ff0a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff0a,
+    0 0 20px #00ff0a,
+    0 0 40px #00ff0a,
+    0 0 60px #00ff0a,
+    0 0 80px #00ff0a,
+    0 0 100px #00ff0a;
+    transform: scale(0.1);
+    animation: animate 4s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    50%,100%
+    {
+        transform: scale(0.1);
+    }
+}
+section .container .circle:nth-child(2)
+{
+    transform: rotate(-180deg);
+}
+section .container .circle:nth-child(2) span::before
+{
+    animation-delay: calc(-0.1s * var(--i));
+}
