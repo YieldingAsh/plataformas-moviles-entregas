@@ -1,0 +1,156 @@
+.container
+{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.square
+{
+    margin: 10px;
+    float: left;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    background-color: aqua;
+    flex-wrap: wrap;
+}
+
+body
+{   
+    text-align: center;
+    background-color: #232323;
+}
+
+
+
+h1{
+    color: white;
+    background-color: rgb(255, 99, 71);
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+#message{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+#stripe
+{
+
+background-color: #232323;
+height: 5 0px;
+text-align: center;
+}
+
+#hard
+{
+    margin-right: 10px;
+}
+
+#easy
+{
+    margin-left: 10px;
+}
+
+.selected
+{
+    background-color: rgb(116, 116, 243);
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+.color
+{
+animation: animateColor1 8s linear infinite;
+}
+
+@keyframes animateColor1
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+
+}
+
+a
+{
+    position: relative;
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+a:hover
+{
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+a:before
+{
+    content: ' ';
+    position: absolute;
+    inset: 2px;
+    background: #232323;
+}
+a span
+{
+    position: relative;
+    z-index: 1;
+}
+a i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+a i::before
+{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 80%;
+   width: 20px;
+   height: 4px;
+   background: #232323; 
+   transform: translateX(-50%) skewX(325deg);
+   transition: 0.5s;
+}
+a:hover i::before
+{
+    width: 20px;
+    left: 20%;
+}
+a i::after
+{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+   width: 20px;
+   height: 4px;
+   background: #232323; 
+   transform: translateX(-50%) skewX(325deg);
+   transition: 0.5s;
+}
+a:hover i::after
+{
+    width: 20px;
+    left: 80%;
+}
